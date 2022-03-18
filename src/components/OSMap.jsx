@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import Markers from "./Markers";
-import visitorIcon from "./constants";
+import {blueIcon} from "./constants";
 import 'leaflet/dist/leaflet.css';
 import "./OSMap.css";
 
@@ -28,7 +28,7 @@ export default function OSMap() {
         }, []);
 
         return position === null ? null : (
-            <Marker position={position} icon={visitorIcon}>
+            <Marker position={position} icon={blueIcon}>
                 <Popup>You are here</Popup>
             </Marker>
         );

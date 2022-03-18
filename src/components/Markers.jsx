@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
-import visitorIcon from "./constants";
+import {redIcon} from "./constants";
 import 'leaflet/dist/leaflet.css';
 import 'react-leaflet-markercluster/dist/styles.min.css'
 import "./Marker.css"
@@ -21,7 +21,7 @@ export default function Markers() {
     return (
         <MarkerClusterGroup className="MarkerCluster">
             {markers.map(marker =>
-                <Marker position={[marker.latitude, marker.longitude]} icon={visitorIcon}>
+                <Marker position={[marker.latitude, marker.longitude]} icon={redIcon}>
                     <Popup>{marker.message}</Popup>
                 </Marker>
             )}
